@@ -33,14 +33,14 @@ if fecha_hoy in diccionario:
     # Datos contenido del correo
     mensaje = EmailMessage()
     mensaje["Subject"] = "¡Feliz Cumpleaños!"
-    mensaje["From"] = mi_correo
+    mensaje["From"] = MI_CORREO
     mensaje["To"] = datos_cumpleañero["email"]
     mensaje.set_content(carta_personal)
 
     # Abrimos, como si fuera un archivo, la conexión con nuestro servidor de correo
     with smtplib.SMTP("smtp.gmail.com", port=587) as conexion:
         conexion.starttls() # Protejemos encriptando nuestro correo
-        conexion.login(user=mi_correo, password=mi_contraseña)
+        conexion.login(user=MI_CORREO, password=MI_CONTRASENA)
         conexion.send_message(mensaje)
 
 
