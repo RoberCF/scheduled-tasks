@@ -41,6 +41,6 @@ jobs:
         env:
           # Your secrets are available as environment variables
           # Add more secrets in Settings > Secrets > Actions
-          mi_correo: ${{ secrets.MI_CORREO }}
-          mi_contraseña: ${{ secrets.MI_CONTRASENA }}
+          MI_CORREO: ${{ secrets.MI_CORREO }}
+          MI_CONTRASENA: ${{ secrets.MI_CONTRASENA }}
         run: python main.py
