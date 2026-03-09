@@ -27,8 +27,8 @@ if fecha_hoy in diccionario:
     carta_personal = carta_original.replace("[NOMBRE]", datos_cumpleañero["nombre"])
 
     # Enviamos el correo de felicitación a la persona indicada
-    mi_correo = "pythonpruebascurso@gmail.com"
-    mi_contraseña = "pine wpwn vkpf rebz"
+    mi_correo = os.environ.get("mi_correo")
+    mi_contraseña = os.environ.get("mi_contraseña")
 
     # Datos contenido del correo
     mensaje = EmailMessage()
